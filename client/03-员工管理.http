@@ -1,4 +1,8 @@
 # 员工管理
+@host=localhost:8080
+@username=jinyong
+@password=123456
+@jwt=eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjpudWxsLCJpZCI6bnVsbCwiZXhwIjoxNzEzMDMwOTgwLCJ1c2VybmFtZSI6ImppbnlvbmcifQ.Du_KL1z6RlfawWpCVNEn7FOgAL00sArJ-qD8xRgrABM
 
 ### 员工列表查询
 GET /emps?page=1&pageSize=10 HTTP/1.1

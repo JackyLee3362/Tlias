@@ -1,8 +1,8 @@
 ### 文件变量
-# @host=localhost:8081
-# @username=jinyong
-# @password=123456
-# @jwt=eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjpudWxsLCJpZCI6bnVsbCwiZXhwIjoxNzExMjMxOTkxLCJ1c2VybmFtZSI6ImppbnlvbmcifQ.cHqwJjWwMERUneR8CRzlCZXOKQcPCQLqyV-HBWiytDk
+@host=localhost:8080
+@username=jinyong
+@password=123456
+@jwt=eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjpudWxsLCJpZCI6bnVsbCwiZXhwIjoxNzExMjMxOTkxLCJ1c2VybmFtZSI6ImppbnlvbmcifQ.cHqwJjWwMERUneR8CRzlCZXOKQcPCQLqyV-HBWiytDk
 
 @dept_id = 1
 ### 获取所有部门
