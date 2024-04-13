@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.HashMap;
 
 // https://jwt.io
-public class TestJWT {
+public class JWTTest {
     @Test
     public void testGenerateJWT(){
         HashMap<String, Object> claims = new HashMap<>();
