@@ -8,7 +8,7 @@
         <artifactId>tlias-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
         <!--<relativePath/>-->
-        <relativePath>../pom.xml</relativePath>
+        <!-- <relativePath>../pom.xml</relativePath> -->
         <!-- lookup parent from repository -->
     </parent>
 
