@@ -1,0 +1,36 @@
+### 文件变量
+# 如果需要，打开注释
+# @host=localhost:8081
+# @username=jinyong
+# @password=123456
+# @jwt=eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjpudWxsLCJpZCI6bnVsbCwiZXhwIjoxNzExMjMxOTkxLCJ1c2VybmFtZSI6ImppbnlvbmcifQ.cHqwJjWwMERUneR8CRzlCZXOKQcPCQLqyV-HBWiytDk
+@boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+### 上传至本地
+POST /upload_local HTTP/1.1
+Host: {{ host }}
+token: {{ jwt }}
+Accept: */*
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary={{boundary}}
+
+--{{boundary}}
+Content-Disposition: form-data; name="image"; filename="1kb.png"
+Content-Type: image/jpeg
+
+< ./head1.jpeg
+--{{boundary}}--
+
+### 上传至阿里云OSS
+POST /upload HTTP/1.1
+Host: {{ host }}
+token: {{ jwt }}
+Accept: */*
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary={{boundary}}
+
+--{{boundary}}
+Content-Disposition: form-data; name="image"; filename="1kb.png"
+Content-Type: image/jpeg
+
+< ./head1.jpeg
+--{{boundary}}--

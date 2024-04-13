@@ -1,0 +1,40 @@
+### 文件变量
+# 如果需要，打开注释
+# @host=localhost:8081
+# @username=jinyong
+# @password=123456
+# @jwt=eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjpudWxsLCJpZCI6bnVsbCwiZXhwIjoxNzExMjMxOTkxLCJ1c2VybmFtZSI6ImppbnlvbmcifQ.cHqwJjWwMERUneR8CRzlCZXOKQcPCQLqyV-HBWiytDk
+
+### 登录功能测试
+
+POST /login HTTP/1.1
+Host: {{ host }}
+Content-Type: application/json
+
+{
+    "username":"{{username}}",
+    "password":"{{password}}"
+}
+
+### 登录功能测试
+
+POST /login HTTP/1.1
+Host: {{ host }}
+Content-Type: application/json
+
+{
+    "username":"jinyong",
+    "password":"123456"
+}
+
+### 使用 > 语法
+# 绝对路径：直接查找
+# 相对路径：会以 *.http 文件所在路径 + 项目路径查找
+
+POST /login HTTP/1.1
+Host: {{ host }}
+Content-Type: application/json
+
+< ./test.json
+
+

@@ -1,0 +1,50 @@
+### 文件变量
+# @host=localhost:8081
+# @username=jinyong
+# @password=123456
+# @jwt=eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjpudWxsLCJpZCI6bnVsbCwiZXhwIjoxNzExMjMxOTkxLCJ1c2VybmFtZSI6ImppbnlvbmcifQ.cHqwJjWwMERUneR8CRzlCZXOKQcPCQLqyV-HBWiytDk
+
+@dept_id = 1
+### 获取所有部门
+
+GET /depts HTTP/1.1
+Host: {{ host }}
+token: {{ jwt }}
+Accept: */*
+Connection: keep-alive
+
+### 根据 id 获取部门信息
+
+GET /depts/{{dept_id}} HTTP/1.1
+Host: {{ host }}
+token: {{ jwt }}
+Accept: */*
+Connection: keep-alive
+
+### 增加部门
+
+POST /depts HTTP/1.1
+Host: {{ host }}
+token: {{ jwt }}
+Content-Type: application/json
+
+{
+    "name": "学工部"
+}
+
+### 根据 id 删除部门
+DELETE /depts/{{dept_id}} HTTP/1.1
+Host: {{ host }}
+token: {{ jwt }}
+
+### 修改部门
+
+PUT /depts HTTP/1.1
+Host: {{ host }}
+token: {{ jwt }}
+Content-Type: application/json
+
+{
+    "id": 6,
+    "name": "学工部111"
+}
