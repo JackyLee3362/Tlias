@@ -26,7 +26,6 @@ public class UploadController {
         return Result.success(url);
     }
 
-    @SuppressWarnings("null")
     @Deprecated
     @PostMapping("/upload_local")
     public Result upload2Local(MultipartFile image) throws IOException {

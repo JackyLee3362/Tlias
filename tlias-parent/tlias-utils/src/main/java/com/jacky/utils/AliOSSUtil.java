@@ -23,9 +23,7 @@ public class AliOSSUtil {
 
 
     
-    @SuppressWarnings("null")
     public String upload(MultipartFile file) throws Exception {
-
 
         String endpoint = aliOSSProperties.getEndpoint();
         String accessKey = aliOSSProperties.getAccessKey();
